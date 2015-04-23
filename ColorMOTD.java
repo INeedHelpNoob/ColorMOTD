@@ -117,6 +117,7 @@ public class ColorMotd extends JavaPlugin implements Listener{
 	    motd = motd.replaceAll("%maxplayers%", String.valueOf(e.getMaxPlayers())); // replaces %maxplayers% with the server player cap!
 	    motd = motd.replaceAll("%ip%", e.getAddress().toString()); // replaces %ip% with the server raw ip!
             motd = motd.replaceAll("&", "\u00A7"); // Replaces & with \u00A7 so the MOTD supports colors.
+            motd = motd.replaceALL("%nl%, "\n"); // Replaces %nl% variable with a line break.
             e.setMotd(motd); // Sets MOTD.
 		
 	}
